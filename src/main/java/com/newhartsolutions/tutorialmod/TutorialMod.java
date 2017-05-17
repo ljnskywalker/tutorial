@@ -1,5 +1,6 @@
 package com.newhartsolutions.tutorialmod;
 
+import com.newhartsolutions.tutorialmod.item.ModItems;
 import com.newhartsolutions.tutorialmod.proxy.CommonProxy;
 import com.newhartsolutions.tutorialmod.tab.CreativeTabTutorial;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,6 +29,7 @@ public class TutorialMod
     public void preInit(FMLPreInitializationEvent event)
     {
         tabTutorial = new CreativeTabTutorial(CreativeTabs.getNextID(), "tab_tutorial");
+        ModItems.preInit();
         proxy.preInit(event);
     }
 
